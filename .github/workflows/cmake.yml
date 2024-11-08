@@ -14,3 +14,12 @@ jobs:
     - uses: actions/checkout@v4
     - name: Run CMake
       run: cmake -Bbuild
+    - name: Make
+      run: |
+        cd build
+        make
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3.1.2
+      with:
+        name: ubuntu
+        path: build/bfi
