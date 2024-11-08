@@ -1,0 +1,5 @@
+cmake_version_required(VERSION 3.28)
+project(bfi)
+set(srcdir src)
+set(mfile main.cpp)
+add_executable(bfi ${srcdir}/${mfile})
