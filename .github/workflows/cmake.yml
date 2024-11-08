@@ -7,7 +7,7 @@ on:
     branches: [ "master" ]
 
 jobs:
-  build:
+  Ubuntu:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,7 +19,23 @@ jobs:
         cd build
         make
     - name: Upload artifact
-      uses: actions/upload-artifact@v3.1.2
+      uses: actions/upload-artifact@v4
       with:
         name: ubuntu
+        path: build/bfi
+  macOS:
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Run CMake
+      run: cmake -Bbuild
+    - name: Make
+      run: |
+        cd build
+        make
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: macos
         path: build/bfi
