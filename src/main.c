@@ -5,6 +5,10 @@ int main() {
     int mempos = 0;
     FILE *fptr;
     fptr = fopen("main.bf", "r");
+    if (fptr == NULL) {
+        printf("main.bf not found.\n");
+        return 1;
+    }
 
     fseek(fptr, 0, SEEK_END);
     long size = ftell(fptr);
