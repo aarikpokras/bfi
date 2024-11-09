@@ -1,12 +1,19 @@
 #include <stdio.h>
 
-int main() {
+int main(int argc, char *argv[]) {
     int mem[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     int mempos = 0;
     FILE *fptr;
-    fptr = fopen("main.bf", "r");
+    
+    if (argc < 2) {
+        printf("Error: no input file\n");
+        return 2;
+    }
+
+    fptr = fopen(argv[1], "r");
+    
     if (fptr == NULL) {
-        printf("main.bf not found.\n");
+        printf("Input file not found\n");
         return 1;
     }
 
