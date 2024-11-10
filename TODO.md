@@ -1,0 +1,1 @@
+- [ ] Debug mode (echos what commands do)
