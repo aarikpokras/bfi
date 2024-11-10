@@ -4,7 +4,7 @@ A simple BrainF interpreter written in C
 ## Compiling and Using
 Clone the repo:
 ```console
-https://github.com/aarikpokras/bfi.git
+$ git clone https://github.com/aarikpokras/bfi.git
 ```
 In the bfi directory, make the build directory and run:
 ```console
