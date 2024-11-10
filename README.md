@@ -11,3 +11,8 @@ Then enter the build directory and run:
 $ make
 ```
 The binary should then be in that directory.
+
+Put the name of the file in the argument, e.g.
+```console
+$ ./bfi main.bf
+```
